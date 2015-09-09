@@ -1,165 +1,197 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Alex's testing site</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-<style type="text/css">
-    ul{
-        padding: 0;
-        list-style: none;
-    }
-    ul li{
-        display: inline-block;
-        position: relative;
-        line-height: 21px;
-        text-align: left;
-    }
-    ul li a{
-        display: block;
-        padding: 8px 25px;
-        color: #333;
-        text-decoration: none;
-    }
-    ul li a:hover{
-        color: #fff;
-        background: #939393;
-    }
-    ul li ul.dropdown{
-        min-width: 125px; 
-        display: none;
-        position: absolute;
-        z-index: 999;
-        left: 0;
-    }
-    ul li:hover ul.dropdown{
-        display: block;	
-    }
-    ul li ul.dropdown li{
-        display: block;
-    }
-</style>
-	</head>
-	<body>
-		<div id="page-wrapper">
+<head>
+    <title>Alex's testing site</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--[if lte IE 8]>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+    <style type="text/css">
+        ul {
+            padding: 0;
+            list-style: none;
+        }
 
-			<!-- Header -->
-				<div id="header">
-					<h2> <a id="logo" href="/"><em>http://</em><i>Alexmaster</i><em>50.github.io</em></a></h2>
-                    <p>  </p>
+        ul > li {
+            display: inline-block;
+            position: relative;
+            line-height: 21px;
+            text-align: left;
+        }
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
-								<li>
-									<a href="#">Dropdown</a>
-									<ul class="dropdown">
-										<li><a href="/calculator">Calculator</a></li>
-										<li><a href="#">WIP</a></li>
-										<li><a href="#">WIP</a></li>
-									</ul>
-								</li>
-							</ul>
-						</nav>
+        ul > li > a {
+            display: block;
+            padding: 8px 25px;
+            color: #333;
+            text-decoration: none;
+        }
 
-				</div>
+        ul li a:hover {
+            color: #fff;
+            background: #939393;
+        }
 
-			<!-- Banner -->
-				<section id="banner">
-					<header>
-						<h2>Alex's testing site for testing stuff</h2>
-					</header>
-				</section>
+        li > ul {
+            display: none;
+            position: absolute;
+            z-index: 100;
+        }
 
-			<!-- Highlights -->
-				<section class="wrapper style1">
-					<div class="container">
-						<div class="row 200%">
-							<section class="4u 12u(narrower)">
-								<div class="box highlight">
-									<i class="icon major fa-paper-plane"></i>
-									<h3>This Is Important</h3>
-									<p>Meow</p>
-								</div>
-							</section>
-							<section class="4u 12u(narrower)">
-								<div class="box highlight">
-									<i class="icon major fa-pencil"></i>
-									<h3>Also Important</h3>
-									<p>Meow2</p>
-								</div>
-							</section>
-							<section class="4u 12u(narrower)">
-								<div class="box highlight">
-									<i class="icon major fa-wrench"></i>
-									<h3>Probably Important</h3>
-									<p>Meow3/p>
-								</div>
-							</section>
-						</div>
-					</div>
-				</section>
+        ul #dropdownmenu:hover ul {
+            display: block;;
+        }
 
-			<!-- Gigantic Heading -->
-				<section class="wrapper style2">
-					<div class="container">
-						<header class="major">
-							<h2>A gigantic heading you can use for whatever</h2>
-							<p>With a much smaller subtitle hanging out just below it</p>
-						</header>
-					</div>
-				</section>
+        li > ul > li {
+            display: block;
+            background-color: #333;
+            border: black solid 1px;
+            text-align: center;
+        }
 
-			<!-- Posts -->
-				<section class="wrapper style1">
-					<div class="container">
-						<div class="row">
-							<section class="6u 12u(narrower)">
-								<div class="box post">
-									<a href="#" class="image left"><img src="images/pic01.jpg" alt="" /></a>
-									<div class="inner">
-										<h3>The First Thingy</h3>
-										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-									</div>
-								</div>
-							</section>
-							<section class="6u 12u(narrower)">
-								<div class="box post">
-									<a href="#" class="image left"><img src="images/pic02.jpg" alt="" /></a>
-									<div class="inner">
-										<h3>The Second Thing</h3>
-										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-									</div>
-								</div>
-							</section>
-						</div>
-						<div class="row">
-							<section class="6u 12u(narrower)">
-								<div class="box post">
-									<a href="#" class="image left"><img src="images/pic03.jpg" alt="" /></a>
-									<div class="inner">
-										<h3>The Third Thing</h3>
-										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-									</div>
-								</div>
-							</section>
-							<section class="6u 12u(narrower)">
-								<div class="box post">
-									<a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
-									<div class="inner">
-										<h3>The Fourth Thing</h3>
-										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-									</div>
-								</div>
-							</section>
-						</div>
-					</div>
-				</section>
 
-	</body>
+    </style>
+</head>
+<body>
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <div id="header">
+        <h2><a id="logo" href="/"><em>http://</em><i>Alexmaster</i><em>50.github.io</em></a></h2>
+
+        <p></p>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li id="dropdownmenu">
+                    <a href="#">Dropdown</a>
+                    <ul class="dropdown">
+                        <li><a href="/calculator">Calculator</a></li>
+                        <li><a href="#">WIP</a></li>
+                        <li><a href="#">WIP</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <!-- Banner -->
+    <section id="banner">
+        <header>
+            <h2>Alex's testing site for testing stuff</h2>
+        </header>
+    </section>
+
+    <!-- Highlights -->
+    <section class="wrapper style1">
+        <div class="container">
+            <div class="row 200%">
+                <section class="4u 12u(narrower)">
+                    <div class="box highlight">
+                        <i class="icon major fa-paper-plane"></i>
+
+                        <h3>This Is Important</h3>
+
+                        <p>Meow</p>
+                    </div>
+                </section>
+                <section class="4u 12u(narrower)">
+                    <div class="box highlight">
+                        <i class="icon major fa-pencil"></i>
+
+                        <h3>Also Important</h3>
+
+                        <p>Meow2</p>
+                    </div>
+                </section>
+                <section class="4u 12u(narrower)">
+                    <div class="box highlight">
+                        <i class="icon major fa-wrench"></i>
+
+                        <h3>Probably Important</h3>
+
+                        <p>Meow3/p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gigantic Heading -->
+    <section class="wrapper style2">
+        <div class="container">
+            <header class="major">
+                <h2>A gigantic heading you can use for whatever</h2>
+
+                <p>With a much smaller subtitle hanging out just below it</p>
+            </header>
+        </div>
+    </section>
+
+    <!-- Posts -->
+    <section class="wrapper style1">
+        <div class="container">
+            <div class="row">
+                <section class="6u 12u(narrower)">
+                    <div class="box post">
+                        <a href="#" class="image left"><img src="images/pic01.jpg" alt=""/></a>
+
+                        <div class="inner">
+                            <h3>The First Thingy</h3>
+
+                            <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a
+                                rutrum accumsan sed. Suspendisse eu.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="6u 12u(narrower)">
+                    <div class="box post">
+                        <a href="#" class="image left"><img src="images/pic02.jpg" alt=""/></a>
+
+                        <div class="inner">
+                            <h3>The Second Thing</h3>
+
+                            <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a
+                                rutrum accumsan sed. Suspendisse eu.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="row">
+                <section class="6u 12u(narrower)">
+                    <div class="box post">
+                        <a href="#" class="image left"><img src="images/pic03.jpg" alt=""/></a>
+
+                        <div class="inner">
+                            <h3>The Third Thing</h3>
+
+                            <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a
+                                rutrum accumsan sed. Suspendisse eu.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="6u 12u(narrower)">
+                    <div class="box post">
+                        <a href="#" class="image left"><img src="images/pic04.jpg" alt=""/></a>
+
+                        <div class="inner">
+                            <h3>The Fourth Thing</h3>
+
+                            <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a
+                                rutrum accumsan sed. Suspendisse eu.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
 </html>

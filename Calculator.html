@@ -1,85 +1,86 @@
-<HTML>
-<Body>
-function Calculate( Vo, V, a, t, S, rVo, rV, ra, rt, rS ) {
-	function getNumber( field ) {
-		field = field.replace( ",", "." );
-		return Number( field );
-	}
-	function setKnown( mask ) {
-		rS.SetValue( Number.NaN );
-		rt.SetValue( Number.NaN );
-		ra.SetValue( Number.NaN );
-		rV.SetValue( Number.NaN );
-		rVo.SetValue( Number.NaN );
-		if ( mask & 16 )rS.SetValue( tS );
-		if ( mask & 8 )rt.SetValue( tt );
-		if ( mask & 4 )ra.SetValue( ta );
-		if ( mask & 2 )rV.SetValue( tV );
-		if ( mask & 1 )rVo.SetValue( tVo );
-	}
-	var tVo = getNumber( Vo );
-	var tV = getNumber( V );
-	var ta = getNumber( a );
-	var tt = getNumber( t );
-	var tS = getNumber( S );
-	var code = 0;
-	code = isNaN( tS ) ? code : code | 1;
-	code = code < < 1;
-	code = isNaN( tt ) ? code : code | 1;
-	code = code < < 1;
-	code = isNaN( ta ) ? code : code | 1;
-	code = code < < 1;
-	code = isNaN( tV ) ? code : code | 1;
-	code = code < < 1;
-	code = isNaN( tVo ) ? code : code | 1;
-	setKnown( code );
-	if ( ( code & 19 ) == 19 ) {
-		tt = 2 * tS / ( tVo + tV );
-		rt.SetValue( tt );
-		ra.SetValue( ( tV - tVo ) / tt );
-	}
-	if ( ( code & 7 ) == 7 ) {
-		tt = ( tV - tVo ) / ta;
-		rt.SetValue( tt );
-		rS.SetValue( tVo * tt + ta * tt * tt / 2 );
-	}
-	if ( ( code & 11 ) == 11 ) {
-		ta = ( tV - tVo ) / tt;
-		ra.SetValue( ta );
-		rS.SetValue( tVo * tt + ta * tt * tt / 2 );
-	}
-	if ( ( code & 14 ) == 14 ) {
-		tVo = tV - ta * tt;
-		rVo.SetValue( tVo );
-		rS.SetValue( tVo * tt + ta * tt * tt / 2 );
-	}
-	if ( ( code & 26 ) == 26 ) {
-		tVo = 2 * tS / tt - tV;
-		rVo.SetValue( tVo )ra.SetValue( ( tV - tVo ) / tt );
-	}
-	if ( ( code & 22 ) == 22 ) {
-		tVo = Math.sqrt( tV * tV - 2 * ta * tS );
-		rVo.SetValue( tVo )rt.SetValue( ( tV - tVo ) / ta );
-	}
-	if ( ( code & 28 ) == 28 ) {
-		tVo = ( tS - ta * tt * tt / 2 ) / tt;
-		rVo.SetValue( tVo )rV.SetValue( tVo + ta * tt );
-	}
-	if ( ( code & 13 ) == 13 ) {
-		tV = tVo + ta * tt;
-		rV.SetValue( tV );
-		rS.SetValue( tVo * tt + ta * tt * tt / 2 );
-	}
-	if ( ( code & 25 ) == 25 ) {
-		ta = 2 * ( tS - tVo * tt ) / ( tt * tt );
-		ra.SetValue( ta );
-		rV.SetValue( tVo + ta * tt );
-	}
-	if ( ( code & 21 ) == 21 ) {
-		tV = Math.sqrt( tVo * tVo + 2 * ta * tS );
-		rV.SetValue( tV );
-		rt.SetValue( ( tV - tVo ) / ta );
-	}
-}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Alex's testing site</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--[if lte IE 8]>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+    <style type="text/css">
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        ul > li {
+            display: inline-block;
+            position: relative;
+            line-height: 21px;
+            text-align: left;
+        }
+
+        ul > li > a {
+            display: block;
+            padding: 8px 25px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            color: #fff;
+            background: #939393;
+        }
+
+        li > ul {
+            display: none;
+            position: absolute;
+            z-index: 100;
+        }
+
+        ul #dropdownmenu:hover ul {
+            display: block;;
+        }
+
+        li > ul > li {
+            display: block;
+            background-color: #333;
+            border: black solid 1px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <div id="header">
+        <h2><a id="logo" href="/"><em>http://</em><i>Alexmaster</i><em>50.github.io</em></a></h2>
+
+        <p></p>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li id="dropdownmenu">
+                    <a href="#">Dropdown</a>
+                    <ul class="dropdown">
+                        <li><a href="/calculator">Calculator</a></li>
+                        <li><a href="#">WIP</a></li>
+                        <li><a href="#">WIP</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+<iframe src="http://planetcalc.com/embed/?id=_MSOxegZWeZTzUx_g4qB1PTGuyS8_XES-4pC5QDOCz2SmPAwUmycczu5KRiRge7ctjsb_Gjnaqzd1XQ3gkf7ajG1wjEpxAh_" scrolling="no" frameborder="0" height="667" width="650">PLANETCALC</iframe>
 </Body>
 </HTML>

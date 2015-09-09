@@ -8,6 +8,43 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+<style type="text/css">
+    ul{
+        padding: 0;
+        list-style: none;
+        background: #f2f2f2;
+    }
+    ul li{
+        display: inline-block;
+        position: relative;
+        line-height: 21px;
+        text-align: left;
+    }
+    ul li a{
+        display: block;
+        padding: 8px 25px;
+        color: #333;
+        text-decoration: none;
+    }
+    ul li a:hover{
+        color: #fff;
+        background: #939393;
+    }
+    ul li ul.dropdown{
+        min-width: 125px; 
+        background: #f2f2f2;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }
+    ul li:hover ul.dropdown{
+        display: block;	
+    }
+    ul li ul.dropdown li{
+        display: block;
+    }
+</style>
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -23,21 +60,10 @@
 								<li class="current"><a href="index.html">Home</a></li>
 								<li>
 									<a href="#">Dropdown</a>
-									<ul class=opener" style="-moz-user-select: none; cursor: pointer; white-space: nowrap; opacity: 1;">
-										<li><a href="#">One</a></li>
-										<li><a href="#">Two</a></li>
-										<li><a href="#">Three</a></li>
-										<li>
-											<a href="#">Submenu</a>
-											<ul>
-												<li><a href="#">SubOne</a></li>
-												<li><a href="#">SubTwo</a></li>
-												<li><a href="#">SubTheThree</a></li>
-												<li><a href="#">SubFour</a></li>
-												<li><a href="#">SubFive</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Four</a></li>
+									<ul class="dropdown">
+										<li><a href="/calculator">Calculator</a></li>
+										<li><a href="#">WIP</a></li>
+										<li><a href="#">WIP</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -60,21 +86,21 @@
 								<div class="box highlight">
 									<i class="icon major fa-paper-plane"></i>
 									<h3>This Is Important</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									<p>Meow</p>
 								</div>
 							</section>
 							<section class="4u 12u(narrower)">
 								<div class="box highlight">
 									<i class="icon major fa-pencil"></i>
 									<h3>Also Important</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									<p>Meow2</p>
 								</div>
 							</section>
 							<section class="4u 12u(narrower)">
 								<div class="box highlight">
 									<i class="icon major fa-wrench"></i>
 									<h3>Probably Important</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									<p>Meow3/p>
 								</div>
 							</section>
 						</div>

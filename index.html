@@ -14,6 +14,21 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
+	<style type="text/css">
+	
+	    ul li ul.dropdown{
+        min-width: 125px;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }
+    ul li:hover ul.dropdown{
+        display: block;
+    }
+	
+	
+	</style>
 	<body>
 		<div id="page-wrapper">
 
@@ -28,10 +43,10 @@
 								<li class="current"><a href="index.html">Home</a></li>
 								<li>
 									<a href="#">Dropdown</a>
-									<ul>
+									<ul class=dropdown">
 										<li><a href="#">One</a></li>
 										<li><a href="#">Two</a></li>
-										<li><a href="#">Th3Three</a></li>
+										<li><a href="#">Three</a></li>
 										<li>
 											<a href="#">Submenu</a>
 											<ul>

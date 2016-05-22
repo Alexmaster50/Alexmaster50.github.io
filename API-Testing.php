@@ -90,6 +90,7 @@
 
 
     <?php
+
 /*
     $json = '{
     "players_online":1042,
@@ -104,33 +105,26 @@
 
     echo "Players on Wynncraft: ". $info->players_online;
 
-*/
 
+*/
     ?>
 
     <br><br>
 
+
+
+    <br><br>
+
     <?php
-/*
 
-    $url = ('https://api.wynncraft.com/public_api.php?action=onlinePlayersSum');
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_URL, $url);
+    $test = file_get_contents('https://www.cecer1.com');
+    echo $test
 
-    $infoW = curl_exec($ch);
 
-    var_dump(json_decode($infoW, true));
-
-    //$infoW = file_get_contents($url);
-
-    //echo "Players on Wynncraft: ". $infoW->players_online;
-
-*/
     ?>
 
 
+    <div style="font-size: 22px" align="center">passed</div>
 
     <br><br>
 
@@ -163,7 +157,7 @@
 
                         <h3>Probably Important</h3>
 
-                        <p>Meow3/p>
+                        <p>Meow3</p>
                     </div>
                 </section>
             </div>

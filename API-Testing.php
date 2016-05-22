@@ -64,7 +64,6 @@
         <h2><a id="logo" href="/"><em>http://</em><i>Alexmaster</i><em>50.github.io</em></a></h2>
 
         <p></p>
-
         <!-- Nav -->
         <nav id="nav">
             <ul>
@@ -73,7 +72,7 @@
                     <a href="#">Dropdown</a>
                     <ul class="dropdown">
                         <li><a href="index.html">Main page</a></li>
-                        <li><a href="/API-Testing.html">API Testing</a></li>
+                        <li><a href="/API-Testing.php">API Testing</a></li>
                         <li><a href="#">WIP1</a></li>
                         <li><a href="#">WIP2</a></li>
                     </ul>
@@ -84,16 +83,57 @@
     </div>
 
 
-
     <br><br>
     <div style="font-size: 22px" align="center">memes</div>
     <br><br>
 
 
 
+    <?php
+/*
+    $json = '{
+    "players_online":1042,
+    "request":{
+        "ip":"108.162.237.22",
+        "timestamp":1463929338
+        }
+    }';
+    $info = json_decode($json);
+
+    var_dump($json, $info)
+
+    echo "Players on Wynncraft: ". $info->players_online;
+
+*/
+
+    ?>
+
+    <br><br>
+
+    <?php
+/*
+
+    $url = ('https://api.wynncraft.com/public_api.php?action=onlinePlayersSum');
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_URL, $url);
+
+    $infoW = curl_exec($ch);
+
+    var_dump(json_decode($infoW, true));
+
+    //$infoW = file_get_contents($url);
+
+    //echo "Players on Wynncraft: ". $infoW->players_online;
+
+*/
+    ?>
+
 
 
     <br><br>
+
 
     <!-- Highlights -->
     <section class="wrapper style1">
@@ -131,19 +171,19 @@
     </section>
 
     <!-- Gigantic Heading -->
-<!--
+    <!--
 
-    <section class="wrapper style2">
-        <div class="container">
-            <header class="major">
-                <h2>A gigantic heading you can use for whatever</h2>
+        <section class="wrapper style2">
+            <div class="container">
+                <header class="major">
+                    <h2>A gigantic heading you can use for whatever</h2>
 
-                <p>With a much smaller subtitle hanging out just below it</p>
-            </header>
-        </div>
-    </section>
+                    <p>With a much smaller subtitle hanging out just below it</p>
+                </header>
+            </div>
+        </section>
 
--->
+    -->
 </div>
 </body>
 </html>

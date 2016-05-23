@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65d42009-7b59-4e88-bf12-4417b04f4f33" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API-Testing.php" afterPath="$PROJECT_DIR$/API-Testing.php" />
-    </list>
+    <list default="true" id="65d42009-7b59-4e88-bf12-4417b04f4f33" name="Default" comment="" />
     <ignored path="Alexmaster50.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -215,12 +212,12 @@
       <workItem from="1463930745205" duration="3167000" />
       <workItem from="1463936528410" duration="7904000" />
       <workItem from="1463952353375" duration="959000" />
-      <workItem from="1464023586305" duration="3551000" />
+      <workItem from="1464023586305" duration="3648000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19420000" />
+    <option name="totallyTimeSpent" value="19517000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1410" extended-state="6" />

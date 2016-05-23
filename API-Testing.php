@@ -90,8 +90,8 @@
 
 
     <?php
-
 /*
+
     $json = '{
     "players_online":1042,
     "request":{
@@ -101,8 +101,6 @@
     }';
     $info = json_decode($json);
 
-    var_dump($json, $info)
-
     echo "Players on Wynncraft: ". $info->players_online;
 
 
@@ -111,15 +109,25 @@
 
     <br><br>
 
-
-
-    <br><br>
-
     <?php
 
-    $test = file_get_contents('https://www.cecer1.com');
-    echo $test
+    $url = 'https://api.wynncraft.com/public_api.php?action=onlinePlayersSum';
 
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    curl_setopt($ch, CURLOPT_URL,$url);
+
+    $info = curl_exec($ch);
+
+    curl_close($ch);
+
+    $infoW = json_decode($info, true);
+
+    echo "Players on Wynncraft: ". $infoW['players_online'];;
 
     ?>
 
